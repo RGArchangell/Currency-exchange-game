@@ -1,0 +1,10 @@
+C:\Users\rgarc\Desktop\CurrencyGame\CurrencyGame\obj\Debug\CurrencyGame.csprojAssemblyReference.cache
+C:\Users\rgarc\Desktop\CurrencyGame\CurrencyGame\obj\Debug\CurrencyGame.Form1.resources
+C:\Users\rgarc\Desktop\CurrencyGame\CurrencyGame\obj\Debug\CurrencyGame.Properties.Resources.resources
+C:\Users\rgarc\Desktop\CurrencyGame\CurrencyGame\obj\Debug\CurrencyGame.csproj.GenerateResource.cache
+C:\Users\rgarc\Desktop\CurrencyGame\CurrencyGame\obj\Debug\CurrencyGame.csproj.CoreCompileInputs.cache
+C:\Users\rgarc\Desktop\CurrencyGame\CurrencyGame\bin\Debug\CurrencyGame.exe.config
+C:\Users\rgarc\Desktop\CurrencyGame\CurrencyGame\bin\Debug\CurrencyGame.exe
+C:\Users\rgarc\Desktop\CurrencyGame\CurrencyGame\bin\Debug\CurrencyGame.pdb
+C:\Users\rgarc\Desktop\CurrencyGame\CurrencyGame\obj\Debug\CurrencyGame.exe
+C:\Users\rgarc\Desktop\CurrencyGame\CurrencyGame\obj\Debug\CurrencyGame.pdb
