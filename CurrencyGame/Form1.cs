@@ -13,15 +13,19 @@ namespace CurrencyGame
     public partial class Form1 : Form
     {
         Random rand = new Random();
-        double C;
+        private double C;
         private double rub = 100000.0;
         private double eur = 0.0;
         private int day = 0;
-        const double k = 0.02;
+        private const double k = 0.02;
+        private const double w0 = 0;
+        private double t = 1.0;
+        private double dt = 0.1;
+        private double wt = 0.0;
 
         public Form1()
         {
-            C = rand.Next(10, 100) * 1.0;
+            C = rand.Next(70, 90) * 1.0;
             InitializeComponent();
         }
 
@@ -80,9 +84,21 @@ namespace CurrencyGame
 
             day++;
 
-            double x = (double) rand.NextDouble();
-            C = C * (1 + k * (x - 0.5));
+            double mu = 0.01;
+            double sigma = 0.01;
+            double new_t = t + dt;
+            wt = winear(t, new_t);
+
+            C = C * Math.Exp((mu - sigma * sigma / 2) * dt + sigma * wt);
             currencyChart.Series[0].Points.AddXY(day, C);
+
+            t = new_t;
+        }
+
+        private double winear(double t, double new_t)
+        {
+            double x = GenerateBoxMuller();
+            return wt + Math.Sqrt(dt) * x;
         }
 
         private void clearButton_Click(object sender, EventArgs e)
@@ -97,6 +113,14 @@ namespace CurrencyGame
         {
             EuroLabel.Text = eur.ToString() + " EUR";
             RubLabel.Text = rub.ToString() + " RUB";
+        }
+
+        private double GenerateBoxMuller()
+        {
+            double a1 = rand.NextDouble();
+            double a2 = rand.NextDouble();
+
+            return Math.Sqrt(-2 * Math.Log(a1)) * Math.Cos(2 * Math.PI * a2);
         }
 
     }
